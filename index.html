@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#101010">
+<title>SAANVI MEN'S WEAR | Premium Fashion</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#d7b77a;--bg:#101010;--card:#191919;--white:#f7f4ed;--muted:#aaa69e}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:'DM Sans',sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+header{text-align:center;padding:30px 15px 24px;border-bottom:1px solid #4d432e}
+.logo{font-family:'Playfair Display',serif;font-size:38px;letter-spacing:7px;color:var(--gold)}
+.tagline{font-size:14px;letter-spacing:2px;margin-top:5px;color:#ddd}
+nav{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;padding:20px 10px}
+nav a,.btn{border:1px solid var(--gold);padding:10px 17px;border-radius:8px;color:var(--gold);background:transparent;transition:.3s}
+nav a:hover,.btn:hover{background:var(--gold);color:#111;transform:translateY(-2px)}
+section{padding:65px 20px;scroll-margin-top:20px}
+.hero{text-align:center;padding-top:65px;padding-bottom:75px}
+.eyebrow{color:var(--gold);letter-spacing:2px;font-size:14px}
+h1,h2{font-family:'Playfair Display',serif}
+h1{font-size:clamp(35px,7vw,60px);line-height:1.15;margin:22px auto;max-width:750px}
+.gold{color:var(--gold)}
+.hero p,.intro{max-width:620px;margin:15px auto 28px;color:#c4c1ba;font-size:17px}
+.btn{display:inline-block;margin:6px}
+.section-title{text-align:center;font-size:34px;margin-bottom:12px}
+.section-sub{text-align:center;color:var(--muted);margin-bottom:35px}
+.divider{width:65px;height:3px;background:var(--gold);margin:15px auto 30px}
+.about{background:#151515;text-align:center}
+.about-box{max-width:750px;margin:auto;border:1px solid #393226;border-radius:14px;padding:28px}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px;margin-top:25px}
+.feature{padding:20px;background:var(--card);border-radius:10px}
+.feature b{display:block;color:var(--gold);margin-bottom:7px}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px;max-width:1000px;margin:auto}
+.product{background:var(--card);border:1px solid #302b22;border-radius:12px;overflow:hidden;transition:.3s}
+.product:hover{transform:translateY(-5px);border-color:var(--gold)}
+.product-visual{height:190px;display:flex;align-items:center;justify-content:center;font-size:65px;background:linear-gradient(145deg,#29251e,#111)}
+.product-info{padding:18px}
+.product-info h3{color:var(--gold);margin-bottom:7px}
+.product-info p{color:var(--muted);font-size:14px;margin-bottom:12px}
+.product-info button{width:100%;padding:10px;border:1px solid var(--gold);background:transparent;color:var(--gold);border-radius:6px}
+.product-info button:hover{background:var(--gold);color:#111}
+.contact{background:#151515;text-align:center}
+.contact-card{max-width:600px;margin:auto;background:var(--card);border:1px solid #393226;padding:25px;border-radius:12px}
+.contact-card p{margin:12px 0;color:#ddd;overflow-wrap:anywhere}
+.contact-card strong{color:var(--gold)}
+footer{text-align:center;padding:35px 15px;border-top:1px solid #302b22}
+footer h3{color:var(--gold);letter-spacing:2px;margin-bottom:15px}
+.socials{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin:20px 0}
+.socials a{color:var(--gold);text-decoration:underline}
+footer small{color:var(--muted)}
+#popup{position:fixed;inset:0;background:#000b;display:none;align-items:center;justify-content:center;padding:20px;z-index:10}
+#popup.show{display:flex;animation:fade .25s}
+.popup-box{background:#1b1b1b;border:1px solid var(--gold);border-radius:15px;padding:28px;text-align:center;max-width:360px;width:100%;animation:rise .3s}
+.popup-box h3{color:var(--gold);margin-bottom:12px}
+.popup-box p{color:#ddd;margin-bottom:20px}
+.close{border:0;background:var(--gold);color:#111;padding:10px 22px;border-radius:6px}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes rise{from{transform:translateY(25px) scale(.95);opacity:0}to{transform:translateY(0) scale(1);opacity:1}}
+@media(max-width:420px){nav{gap:8px}nav a{padding:9px 12px;font-size:14px}.logo{font-size:32px}section{padding:48px 15px}}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">SAANVI</div>
+<p class="tagline">MEN'S WEAR | PREMIUM FASHION</p>
+</header>
+<nav>
+<a href="#home" data-msg="Welcome to Saanvi Men's Wear.">Home</a>
+<a href="#about" data-msg="Discover our style and story.">About</a>
+<a href="#products" data-msg="Explore our men's fashion collection.">Products</a>
+<a href="#contact" data-msg="Contact us for your next look.">Contact</a>
+</nav>
+
+<main>
+<section class="hero" id="home">
+<p class="eyebrow">STYLE • CLASS • CONFIDENCE</p>
+<h1>Dress Like <span class="gold">You Mean It.</span></h1>
+<p>Discover premium menswear designed for your everyday style. Find your look, express your personality and wear confidence.</p>
+<a class="btn" href="#products" data-msg="Explore shirts, trousers and everyday menswear.">Explore Collection →</a>
+<a class="btn" href="#contact" data-msg="We would love to help you find your style.">Visit Our Store</a>
+</section>
+
+<section class="about" id="about">
+<h2 class="section-title">About <span class="gold">Saanvi</span></h2>
+<div class="divider"></div>
+<div class="about-box">
+<p>Welcome to <strong class="gold">Saanvi Men's Wear</strong>, your destination for stylish menswear. Our goal is to help you discover clothing that feels comfortable, looks smart and suits your personality.</p>
+<div class="features">
+<div class="feature"><b>✦ Modern Style</b><span>Looks for every occasion.</span></div>
+<div class="feature"><b>✦ Everyday Comfort</b><span>Style you can feel good in.</span></div>
+<div class="feature"><b>✦ Personal Service</b><span>Visit us and explore the collection.</span></div>
+</div>
+</div>
+</section>
+
+<section id="products">
+<h2 class="section-title">Our <span class="gold">Collection</span></h2>
+<p class="section-sub">Find your next favourite look.</p>
+<div class="products-grid">
+<div class="product">
+<div class="product-visual">👔</div>
+<div class="product-info"><h3>Classic Shirts</h3><p>Smart styles for everyday wear and special occasions.</p><button onclick="showPopup('Classic Shirts','Contact us to explore available colours, sizes and prices.')">Explore Collection</button></div>
+</div>
+<div class="product">
+<div class="product-visual">👖</div>
+<div class="product-info"><h3>Denim & Jeans</h3><p>Versatile denim for casual and modern looks.</p><button onclick="showPopup('Denim & Jeans','Message us to ask about available denim styles.')">Explore Collection</button></div>
+</div>
+<div class="product">
+<div class="product-visual">🧥</div>
+<div class="product-info"><h3>Jackets & Layers</h3><p>Complete your outfit with a confident finish.</p><button onclick="showPopup('Jackets & Layers','Visit our shop to check the current collection.')">Explore Collection</button></div>
+</div>
+<div class="product">
+<div class="product-visual">👕</div>
+<div class="product-info"><h3>Casual Wear</h3><p>Easygoing styles for relaxed everyday outfits.</p><button onclick="showPopup('Casual Wear','Contact our store for current availability and prices.')">Explore Collection</button></div>
+</div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<h2 class="section-title">Let's <span class="gold">Connect</span></h2>
+<p class="section-sub">We're happy to help you find your style.</p>
+<div class="contact-card">
+<p>📍 <strong>Store Location</strong></p>
+<p>Postal Park Chauraha, opposite Devi Asthan Mandir</p>
+<p>📞 <strong>Call Us</strong></p>
+<p><a href="tel:YOUR NUMBER">YOUR NUMBER</a></p>
+<p>💬 <strong>WhatsApp Us</strong></p>
+<a class="btn" target="_blank" rel="noopener" href="https://wa.me/918210503246">Chat on WhatsApp</a>
+<p style="margin-top:20px">Visit our store and discover your next look.</p>
+</div>
+</section>
+</main>
+
+<footer>
+<h3>SAANVI MEN'S WEAR</h3>
+<p>Style • Class • Confidence</p>
+<div class="socials">
+<a target="_blank" rel="noopener" href="https://www.instagram.com/sanvi.mens.wear/">Instagram</a>
+<a target="_blank" rel="noopener" href="https://wa.me/918210503246">WhatsApp</a>
+<a target="_blank" rel="noopener" href="https://www.facebook.com/">Facebook</a>
+<a target="_blank" rel="noopener" href="https://x.com/">Twitter / X</a>
+</div>
+<small>© 2026 Saanvi Men's Wear. All rights reserved.</small>
+</footer>
+
+<div id="popup" onclick="if(event.target===this)closePopup()">
+<div class="popup-box">
+<h3 id="popTitle">Welcome</h3>
+<p id="popText">Discover Saanvi Men's Wear.</p>
+<button class="close" onclick="closePopup()">Got it</button>
+</div>
+</div>
+
+<script>
+function showPopup(title,message){
+document.getElementById('popTitle').textContent=title;
+document.getElementById('popText').textContent=message;
+document.getElementById('popup').classList.add('show');
+}
+function closePopup(){
+document.getElementById('popup').classList.remove('show');
+}
+document.querySelectorAll('nav a,.hero a').forEach(function(link){
+link.addEventListener('click',function(){
+var message=this.dataset.msg;
+if(message){
+setTimeout(function(){showPopup('SAANVI MEN’S WEAR',message)},180);
+}
+});
+});
+document.addEventListener('keydown',function(e){
+if(e.key==='Escape')closePopup();
+});
+</script>
+</body>
+</html>
